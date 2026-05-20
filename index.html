@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>智平衡 APP 隱私權政策</title>
-    <meta name="description" content="智平衡 APP 隱私權政策，說明個人資料之蒐集、處理、利用、保存、安全維護與使用者權利。" />
+    <title>Neuro-Plus+ app 服務條款與隱私權政策</title>
+    <meta name="description" content="Neuro-Plus+ app 服務條款與隱私權政策，說明個人資料蒐集、處理、利用、保護、第三方服務、跨境傳輸及臉部影像資料處理方式。" />
     <style>
         :root {
             --bg: #f6f8f7;
@@ -13,219 +13,396 @@
             --text: #1f2933;
             --muted: #667085;
             --primary: #4caf50;
+            --primary-dark: #255c2a;
+            --primary-soft: #f1faf3;
             --border: #dfe7e2;
+            --warning: #fff7ed;
+            --warning-border: #fb923c;
         }
 
         * {
             box-sizing: border-box;
         }
 
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.8;
+        html {
+            scroll-behavior: smooth;
         }
 
-        .hero {
-            background: linear-gradient(135deg, #eaf6ec, #ffffff);
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.85;
+            letter-spacing: 0.01em;
+        }
+
+        header {
+            background: linear-gradient(135deg, #eaf6ec 0%, #ffffff 52%, #f1faf3 100%);
             border-bottom: 1px solid var(--border);
-            padding: 48px 20px 32px;
+            padding: 52px 20px 36px;
             text-align: center;
         }
 
-        .hero h1 {
-            margin: 0 0 12px;
-            font-size: clamp(28px, 5vw, 42px);
-            letter-spacing: 0.03em;
+        header .brand {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 6px 14px;
+            margin-bottom: 16px;
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 700;
         }
 
-        .hero p {
+        h1 {
             margin: 0;
+            font-size: clamp(28px, 6vw, 44px);
+            line-height: 1.25;
+            letter-spacing: 0.02em;
+        }
+
+        header p {
+            max-width: 780px;
+            margin: 16px auto 0;
             color: var(--muted);
+            font-size: 16px;
+        }
+
+        .container {
+            width: min(1040px, calc(100% - 32px));
+            margin: 28px auto 64px;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        nav {
+            position: sticky;
+            top: 18px;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+        }
+
+        nav strong {
+            display: block;
+            margin-bottom: 10px;
             font-size: 15px;
         }
 
+        nav a {
+            display: block;
+            color: var(--muted);
+            text-decoration: none;
+            padding: 8px 0;
+            font-size: 14px;
+            border-bottom: 1px solid #f2f4f7;
+        }
+
+        nav a:last-child {
+            border-bottom: 0;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
         main {
-            width: min(960px, calc(100% - 32px));
-            margin: 28px auto 56px;
             background: var(--card);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            box-shadow: 0 12px 32px rgba(31, 41, 51, 0.06);
+            border-radius: 22px;
             padding: clamp(22px, 5vw, 48px);
+            box-shadow: 0 12px 36px rgba(15, 23, 42, 0.06);
         }
 
         .notice {
             border-left: 5px solid var(--primary);
-            background: #f1faf3;
-            border-radius: 12px;
-            padding: 16px 18px;
+            background: var(--primary-soft);
+            border-radius: 14px;
+            padding: 18px 20px;
             margin-bottom: 28px;
-            color: #255c2a;
+            color: var(--primary-dark);
         }
 
-        h2 {
-            margin-top: 36px;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-            font-size: 22px;
-        }
-
-        h2:first-of-type {
-            border-top: 0;
-            padding-top: 0;
-            margin-top: 0;
-        }
-
-        ul {
-            padding-left: 1.3em;
-        }
-
-        li {
-            margin: 6px 0;
+        .warning {
+            border-left: 5px solid var(--warning-border);
+            background: var(--warning);
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin: 28px 0;
+            color: #7c2d12;
         }
 
         .meta {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 12px;
-            margin: 24px 0;
+            margin: 24px 0 32px;
         }
 
         .meta div {
             border: 1px solid var(--border);
-            border-radius: 14px;
+            border-radius: 16px;
             padding: 14px 16px;
             background: #fbfdfb;
         }
 
-        .meta strong {
+        .meta span {
             display: block;
             color: var(--muted);
             font-size: 13px;
             margin-bottom: 4px;
         }
 
-        footer {
-            color: var(--muted);
-            font-size: 14px;
-            margin-top: 36px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
+        .meta strong {
+            display: block;
+            font-size: 15px;
         }
 
-        a {
-            color: var(--primary);
+        h2 {
+            margin: 44px 0 14px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border);
+            font-size: clamp(22px, 4vw, 28px);
+            line-height: 1.35;
+        }
+
+        h3 {
+            margin: 28px 0 10px;
+            font-size: 19px;
+            color: #111827;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        ul,
+        ol {
+            padding-left: 1.35em;
+            margin: 12px 0 16px;
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        .list-title {
+            font-weight: 700;
+            margin-top: 18px;
+        }
+
+        footer {
+            margin-top: 44px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 860px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                position: static;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header class="hero">
-        <h1>智平衡 APP 隱私權政策</h1>
-        <p>本政策說明智平衡 APP 如何蒐集、處理、利用與保護您的個人資料。</p>
+    <header>
+        <div class="brand">Neuro-Plus+ app</div>
+        <h1>服務條款與隱私權政策</h1>
+        <p>本政策說明 Neuro-Plus+ app 服務平台如何蒐集、處理、利用與保護您的個人資料，以及您使用本平台時應了解的重要權利與義務。</p>
     </header>
 
-    <main>
-        <section class="notice">
-            歡迎使用智平衡 APP。為保障您的個人資料與隱私權益，請您詳閱本隱私權政策。當您註冊、登入或使用本 APP 服務時，表示您已閱讀並理解本政策內容。
-        </section>
+    <div class="container">
+        <nav aria-label="頁面目錄">
+            <strong>目錄</strong>
+            <a href="#intro">政策說明</a>
+            <a href="#data-collected">1. 我們會向您收集哪些個人數據</a>
+            <a href="#data-use">2. 我們會如何蒐集、使用您的個人數據</a>
+            <a href="#data-protection">3. 我們會如何保護您的個人數據</a>
+            <a href="#minor">4. 未成年人隱私權</a>
+            <a href="#third-party">5. 第三方提供商及其服務</a>
+            <a href="#transfer">6. 全球範圍轉移</a>
+            <a href="#revision">7. 修正權利</a>
+            <a href="#face-image">8. 臉部影像資料處理聲明</a>
+            <a href="#important">9. 重要聲明</a>
+        </nav>
 
-        <div class="meta">
-            <div>
-                <strong>服務名稱</strong>
-                智平衡 APP
-            </div>
-            <div>
-                <strong>資料蒐集者</strong>
-                智平衡健康集團／拉菲爾人本診所相關營運單位
-            </div>
-            <div>
-                <strong>最後更新日期</strong>
-                2026 年 5 月 19 日
-            </div>
-        </div>
+        <main>
+            <section id="intro">
+                <div class="notice">
+                    Neuro-Plus+ app
+                    服務平台（下稱「本平台」）為智平衡健康集團與拉菲爾人本診所合作指定使用之健康紀錄平台。本平台的目的在於輔助病患與其照護醫療團隊進行健康管理、紀錄生理量測資訊、追蹤症狀變化與生活狀況，以促進個人健康改善。所蒐集或分析之數據，不作為自動化診斷或第三方行銷資料使用。
+                </div>
 
-        <h2>一、適用範圍</h2>
-        <p>本隱私權政策適用於智平衡 APP 及其相關服務，包括會員註冊、登入、裝置連線、穿戴設備資料同步、通知推播、使用紀錄查詢、客服聯繫及其他由本 APP 提供之功能。</p>
+                <div class="meta">
+                    <div>
+                        <span>服務名稱</span>
+                        <strong>Neuro-Plus+ app</strong>
+                    </div>
+                    <div>
+                        <span>合作使用單位</span>
+                        <strong>智平衡健康集團、拉菲爾人本診所</strong>
+                    </div>
+                    <div>
+                        <span>文件類型</span>
+                        <strong>服務條款與隱私權政策</strong>
+                    </div>
+                </div>
 
-        <h2>二、我們可能蒐集的資料類別</h2>
-        <p>依您使用服務的情形，我們可能蒐集、處理或利用以下資料：</p>
-        <ul>
-            <li>會員識別資料：會員編號、帳號識別碼、登入權杖、手機號碼、姓名、電子郵件。</li>
-            <li>基本個人資料：性別、生日、地址、縣市、行政區。</li>
-            <li>健康與身體相關資料：身高、體重、HRV 計算時間、穿戴或使用紀錄，以及您於服務中提供或由裝置同步之健康相關資訊。</li>
-            <li>裝置與連線資料：藍牙裝置序號、設備識別碼、裝置狀態、電量、溫度、穿戴設備歷史紀錄、同步時間與連線狀態。</li>
-            <li>登入與使用資料：最後登入時間、使用紀錄、操作紀錄、錯誤紀錄、APP 版本資訊。</li>
-            <li>通知資料：Firebase 推播權杖或其他用於提供推播通知的識別資訊。</li>
-            <li>第三方或外部裝置資料：如您主動綁定或授權使用 ASUS、Acer、Garmin 或其他支援服務，可能處理您授權範圍內的帳號或同步資料。</li>
-        </ul>
+                <p>本平台深知隱私對您的重要性，並會盡全力保護您的隱私。請在向我們的產品提交個人或隱私數據之前，閱讀、瞭解並同意本《服務條款與隱私權政策》（下文簡稱「本政策」）。</p>
 
-        <h2>三、蒐集、處理及利用目的</h2>
-        <p>我們蒐集及利用資料的目的包括：</p>
-        <ul>
-            <li>提供會員註冊、登入、身分驗證與帳號管理服務。</li>
-            <li>提供智平衡 APP 之核心功能，包括裝置綁定、藍牙連線、穿戴設備資料同步、設備狀態顯示與使用紀錄查詢。</li>
-            <li>提供推播通知、服務提醒、帳務或會員相關通知。</li>
-            <li>維護服務安全、偵測異常登入、排除錯誤、改善系統穩定性。</li>
-            <li>進行服務品質改善、功能優化、統計分析與營運管理。</li>
-            <li>依法律、主管機關或司法機關要求，履行法定義務。</li>
-        </ul>
+                <p>我們制定本政策的目的在於幫助您瞭解以下內容：</p>
+                <ol>
+                    <li>我們會向您收集哪些個人數據</li>
+                    <li>我們會如何蒐集、使用您的個人數據</li>
+                    <li>我們會如何保護您的個人數據</li>
+                    <li>我們會如何保護未成年人的隱私權</li>
+                    <li>我們的第三方提供商及其服務</li>
+                    <li>您的個人數據如何在全球範圍轉移</li>
+                    <li>隱私權保障條款的修正權利</li>
+                    <li>臉部影像資料處理聲明</li>
+                    <li>重要聲明</li>
+                </ol>
 
-        <h2>四、資料利用之期間、地區、對象及方式</h2>
-        <ul>
-            <li>期間：於會員關係存續期間、服務提供所需期間、法律要求保存期間，或特定目的消失前保存與利用。</li>
-            <li>地區：中華民國境內；如使用雲端、Firebase、分析、推播或其他技術服務，資料可能依服務提供商架構進行跨境傳輸或處理。</li>
-            <li>對象：本集團、受託處理資料之資訊服務商、雲端服務商、推播服務商、合作醫療或健康服務單位，以及依法有權要求提供資料之機關。</li>
-            <li>方式：以電子、自動化系統、人工或其他合法合理方式進行蒐集、處理、儲存、傳輸、查詢、分析與刪除。</li>
-        </ul>
+                <p>請注意，本政策僅適用於本平台，包括顯示或提及本政策的電腦應用程式、工具、軟體、網站以及服務。</p>
+                <p>本政策闡述了我們如何處理您的個人和隱私數據，並聲明我們對保護隱私的承諾。建議您閱讀本政策，充分瞭解本平台或服務的隱私政策。</p>
+            </section>
 
-        <h2>五、第三方服務與 SDK</h2>
-        <p>本 APP 可能使用第三方服務以提供推播、分析、錯誤排除及平台功能，例如 Firebase Cloud Messaging、Firebase Analytics、Google Play 服務、Apple iOS
-            系統服務或其他必要 SDK。第三方服務可能依其隱私權政策處理必要的裝置資訊、應用程式使用資訊或技術識別資訊。</p>
+            <section id="data-collected">
+                <h2>1. 我們會向您收集哪些個人數據</h2>
+                <p>個人數據是指在單獨使用或結合其他資訊使用時能夠確定個人身份的資訊。此類數據會在您使用本平台或服務時被收集，包括姓名、出生日期、地址、照片、影片、健康數據、第三方
+                    APP，以及訪問產品或服務的位置和日期。當您同意第三方提供予我們存取該資料時，即視為同意我們可依照本政策儲存並使用該資料。</p>
 
-        <h2>六、藍牙與穿戴設備資料</h2>
-        <p>當您使用本 APP 連線支援之穿戴設備或健康裝置時，本 APP
-            可能透過藍牙掃描、連線與同步設備資料，包括設備序號、狀態、電量、溫度、穿戴紀錄及歷史資料。相關資料將用於顯示設備狀態、同步紀錄、提供健康管理服務及改善使用體驗。</p>
+                <p class="list-title">下文為我們可能收集的個人數據類型：</p>
+                <ul>
+                    <li><strong>身分識別：</strong>姓名、通訊地址、電話號碼、電子郵件信箱、偏好聯絡方式等。</li>
+                    <li><strong>個人特徵：</strong>性別、出生年月日、血型、身高、體重、習慣（如抽煙、飲酒）、個性。</li>
+                    <li><strong>健康記錄：</strong>各式量測資料，例如人體感測資訊、物聯網感測器收集到的身體狀態資料、心跳速率、血壓、血糖、體重、體脂、體溫、壓力等；或活動資訊，包括跑步、步行或騎自行車等活動的步數、消耗熱量和速度等。
+                    </li>
+                </ul>
+            </section>
 
-        <h2>七、個人資料之保護</h2>
-        <p>我們將採取合理且適當的技術與組織安全措施，保護您的個人資料避免遭未經授權之存取、竄改、洩漏、毀損或滅失。惟網際網路或行動通訊環境無法保證絕對安全，請您妥善保管帳號、密碼及行動裝置。</p>
+            <section id="data-use">
+                <h2>2. 我們會如何蒐集、使用您的個人數據</h2>
+                <p>我們可能會使用包括您生日在內的個人資訊來驗證身分、協助辨識使用者以及確認適當的服務。例如：我們可能使用出生年月日、性別、健康紀錄等資訊，確認帳戶持有人屬性，以提供適當的客戶服務。</p>
 
-        <h2>八、您的權利</h2>
-        <p>您得依個人資料保護法及相關法令，就您的個人資料向我們行使以下權利：</p>
-        <ul>
-            <li>查詢或請求閱覽。</li>
-            <li>請求製給複製本。</li>
-            <li>請求補充或更正。</li>
-            <li>請求停止蒐集、處理或利用。</li>
-            <li>請求刪除。</li>
-        </ul>
-        <p>如您欲行使前述權利，請透過本政策所列聯絡方式與我們聯繫。我們可能為確認身分而請您提供必要資訊。</p>
+                <p>基於本平台的健康服務特殊性，我們必需使用您的個人資訊及您所提供的資料來製作、開發、操作或分析判斷、研究，以確保服務及內容的準確性，或是用來改善前述作業。</p>
 
-        <h2>九、您可自由選擇是否提供資料</h2>
-        <p>您可自由選擇是否提供個人資料。惟若您拒絕提供完成會員註冊、登入、身分驗證、裝置連線或服務提供所必要之資料，可能導致您無法使用全部或部分功能。</p>
+                <p>您留存的資料會在我們直接或間接服務您的狀況下被閱讀、分析、比較、整理、研究或進行補充記錄。多數作業會以匿名、自動化的方式進行，但需要時，專家可能需要知道您的身分，以接受您的諮詢、更新您的資料、進一步接觸服務您，或進行緊急聯絡通知以保護您的健康等。
+                </p>
 
-        <h2>十、兒童及未成年人保護</h2>
-        <p>未成年人使用本 APP 時，應由法定代理人閱讀、理解並同意本政策。如您為未成年人，請在法定代理人同意及陪同下使用本服務。</p>
+                <p>我們可能不定時使用個人資訊，以寄送重要通知，例如服務條款、消費條件等政策變更、本平台最新的服務公告、健康提醒衛教、軟體更新、排程課程活動等通知。此通知訊息對照顧您的健康互動至關重要，亦能提升您對本平台服務的使用者體驗。
+                </p>
 
-        <h2>十一、政策修訂</h2>
-        <p>我們得因法令、服務內容、技術或營運需求調整本隱私權政策。政策修訂後將公布於本頁面或 APP 內適當位置；重大變更時，將以合理方式通知您。</p>
+                <p>我們會記錄您的個人資訊以讓您享有更便利、更個人化的服務體驗。舉例來說：如果我們得知您的名字，就能在您下次使用本平台時向您表示歡迎；或在填寫相關問卷時減少不必要的重複填寫。</p>
 
-        <h2>十二、聯絡方式</h2>
-        <p>如您對本隱私權政策、個人資料處理方式或權利行使有任何問題，請透過以下方式聯繫我們：</p>
-        <ul>
-            <li>公司／單位：智平衡健康集團／拉菲爾人本診所相關營運單位</li>
-            <li>客服信箱：請填入正式客服信箱</li>
-            <li>客服電話：請填入正式客服電話</li>
-            <li>地址：請填入正式營業地址</li>
-        </ul>
+                <p>我們和大多數線上服務一樣，會自動收集部分資訊並將其儲存於記錄檔中。這類資訊包括網路通訊協定（IP）位址、瀏覽器類型及語言、網路服務供應商（ISP）、轉介和離開系統和應用程式、作業系統、日期／時間戳記及點選填寫資料。我們使用這類資訊瞭解及分析趨勢、管理系統、瞭解使用者在系統上的行為、判定使用者對特定主題的關注程度，並衡量與使用者溝通的效益、改善我們的產品和服務，以及收集整體使用者的相關人口統計資訊。我們得使用前述資訊從事相關活動通知、快速填寫表單問卷、產品服務匹配通知服務、選擇遞送訊息方式時機等整合運用。
+                </p>
 
-        <footer>
-            本文件為網頁版隱私權政策範本，正式上線前建議由公司法務、資安或個資窗口確認公司名稱、聯絡資訊、資料保存期間、第三方 SDK 清單及跨境傳輸描述是否完整正確。
-        </footer>
-    </main>
+                <p>我們可能會提供您個人化的服務，包括內容和廣告。我們會用您所提供的個人資料，為您打造個人化的服務，包括個人化內容或建議活動。例如：若您過去曾參與某一系列活動，代表您對該活動有興趣，當該活動有最新消息，我們會優先知會予您。
+                </p>
+
+                <p>若您參加課程、揪團或類似健康活動，我們也可能使用您提供的資訊進行這些活動。</p>
+
+                <p>我們也可能基於內部目的而使用個人資訊，例如進行資料分析及研究，以改進我們的產品、服務。</p>
+
+                <p>我們可能會基於損失預防及反詐騙目的而使用您個人資訊。</p>
+
+                <div class="warning">
+                    <strong>關於廣告與追蹤的聲明：</strong>本平台不整合任何第三方廣告 SDK。我們所蒐集之個資（如電話、電子郵件）僅用於帳號驗證與服務聯繫之用，不會與第三方資料串接建立追蹤。
+                </div>
+            </section>
+
+            <section id="data-protection">
+                <h2>3. 我們會如何保護您的個人數據</h2>
+                <p>我們非常重視您個人資訊的安全性。本平台服務都會在資料傳輸期間使用加密技術來保護您的個人資訊。我們會使用具有存取限制的電腦系統來儲存您的個人資料，並會將這些電腦系統存放在具有實體安全措施的場所。</p>
+
+                <p>我們會採取一切合理可行的措施，保護您的個人數據。例如，我們會使用加密技術確保數據的機密性；我們會使用受信賴的保護機制防止數據遭到惡意攻擊；我們會部署權限控制機制，確保只有授權人員才可訪問個人數據。
+                </p>
+
+                <p>我們會採取一切合理可行的措施，確保未收集無關的個人數據。我們只會在達成本政策所述目的所需的期限內保留您的個人數據，除非需要延長保留期或受到法律的允許。我們會盡力保護您的個人數據，但是請注意任何安全措施都無法做到無懈可擊。
+                </p>
+
+                <p>我們於使用者註冊及登入頁面未就手機號碼、帳號、姓名、Email
+                    與地址等欄位進行遮蔽，以利使用者於註冊或登入時透過介面確認其所輸入資訊無誤；另因使用者須輸入密碼登入後方得查看個人資訊，如手機號碼、帳號、姓名、Email
+                    與地址，且前述資訊非屬支付工具（如信用卡卡號及驗證資料）等高風險資訊，故本平台未於介面就前述資訊進行遮蔽。</p>
+
+                <p>使用者應自行確實保管所使用之裝置、設備及相關登入資訊之安全，防止他人窺視、非法使用、取得登入資訊、竄改基本身分資料、毀損紀錄等情形。如使用者發現有前述情事，應立即通知本平台停止相關服務並採取防範措施，包括但不限於暫停付款行為、變更密碼等。本平台將協助調查釐清冒用或盜用之事實，惟若因使用者故意或過失所衍生損害，應由使用者自行承擔。
+                </p>
+            </section>
+
+            <section id="minor">
+                <h2>4. 我們會如何保護未成年人的隱私權</h2>
+                <p>我們的產品和服務主要面向為成人。如果沒有父母或監護人的同意，不得創建未成年人帳號。對於經父母同意而收集未成年人數據的情況，我們只會在受到法律允許、父母或監護人明確同意，或者保護未成年人所必要的情況下使用或披露此數據。
+                </p>
+            </section>
+
+            <section id="third-party">
+                <h2>5. 第三方提供商及其服務</h2>
+                <p>除非與第三方合作夥伴合作或得到您授權，我們絕不會提供其他第三人任何您的個人資料給其他個人、團體或企業。我們也會嚴格限制合作夥伴使用和揭露我們所提供的資料。</p>
+
+                <p class="list-title">以下是我們與其分享資訊的第三方合作夥伴類型：</p>
+
+                <h3>我們的關聯企業</h3>
+                <p>我們的關聯企業是指我們及我們現在與未來所組設之分公司、子公司、辦事處、工廠、關聯企業及（或）其他營業組織。「關聯企業」係指以下任何型態的事業組織：直接或間接控制我們、直接或間接受我們控制、與我們同受某一企業或同一經營團隊控制。
+                </p>
+
+                <h3>服務供應商</h3>
+                <p>本平台服務可能含有連結至第三方系統、產品或服務的連結。我們的產品與服務亦可能使用或提供第三方產品或服務，例如
+                    APP、各式量測設備、物流廠商、商城、金融機構等。第三方所收集的資料可能包括如位置資料或詳細聯絡資料等，均依據該第三方的隱私權實務為準。我們鼓勵您瞭解這些第三方的隱私權實施方式。</p>
+
+                <p>我們會提供上述服務供應商必要的個人資訊，以進行如服務提供、資訊處理、完成訂單與收款事項；或是管理及加強您的資料、提供售後服務及評估您對產品及服務的興趣；以及執行滿意度調查或研究相關流程及品質適切性等。這類公司有義務保護您的資訊，並可能位於本平台營運的任何地方。
+                </p>
+
+                <h3>政府機關</h3>
+                <p>您居住地的法律、法律程序、訴訟或公共和政府機關可能會要求本平台必須揭露您的個人資訊。我們也可能基於國家安全、執法或其他重要公共議題，在判定為必要及適當的情況下，揭露您的個人資訊。我們也可能為了執行企業的條款與條件、保障企業權益或保障使用者，在判定為合理必要的情況下揭露您的相關資訊。
+                </p>
+            </section>
+
+            <section id="transfer">
+                <h2>6. 您的個人數據如何在全球範圍轉移</h2>
+                <p>我們通過遍佈全球的資源和伺服器提供產品和服務。這意味著，您的個人數據可能會被轉移到您使用產品或服務所在國家／地區境外的其他管轄區，或者受到來自這些管轄區的訪問。此類管轄區可能設有不同的數據保護法，甚至未設立相關法律。在此類情況下，我們會確保您的數據得到所有適用法律和法規要求的足夠同等保護。
+                </p>
+            </section>
+
+            <section id="revision">
+                <h2>7. 隱私權保障條款的修正權利</h2>
+                <p>隱私權保護政策將因應科技發展趨勢、相關法規之修訂或其他環境變遷等因素而為適當之修改，以落實保障使用者隱私權之立意。如有修改本條款時，將透過本服務之網站、網頁、程式或相關系統頁面公告。</p>
+                <p>使用者應隨時注意相關修改或變更。若使用者於變更或修改後繼續使用本服務，視為使用者已接受及同意變更或修改後的隱私權保護政策。假如使用者不同意變更或修改後之政策內容，請您立即停止使用本服務。</p>
+            </section>
+
+            <section id="face-image">
+                <h2>8. 臉部影像資料處理聲明</h2>
+                <p>當您主動進行健康量測時，系統將透過裝置鏡頭擷取臉部影像，以即時分析生理訊號。所有影像資料僅在您的裝置中即時處理，並暫存在記憶體中，不會被儲存、上傳、備份或分享。</p>
+                <p>本平台不執行臉部辨識、身份比對或行為分析，亦不建立任何與臉部影像相關之識別性檔案。所記錄並保留者，僅為量測後自動推算之生理參數數值，如心率、血壓、呼吸速率、血氧濃度等，這些數據會依照醫療使用需求作為個人健康紀錄保存。
+                </p>
+                <p>這些紀錄資料不包含任何臉部圖像、視訊或可識別影像內容，亦無法還原或追溯影像來源。</p>
+            </section>
+
+            <section id="important">
+                <h2>9. 重要聲明</h2>
+                <p>請妥善保管您的個人帳號、密碼，以防止他人蒐集並使用您的個人資料。您對我們所提供之個人所屬帳號、密碼負保管之責。如您未妥善保管而遭盜用或遭偽造所致之損害，我們不負任何賠償責任。</p>
+                <p>使用者同意提供個人資料予智平衡健康集團與拉菲爾人本診所，根據個資法規範作為企業行銷及資料分析之用。</p>
+            </section>
+
+            <footer>
+                <p>本頁為 Neuro-Plus+ app 服務條款與隱私權政策網頁版。正式發布前，建議再次確認公司名稱、客服聯絡資訊、第三方服務清單、資料保存期間與法務用語。</p>
+            </footer>
+        </main>
+    </div>
 </body>
 
 </html>
