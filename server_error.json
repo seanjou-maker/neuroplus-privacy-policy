@@ -1,0 +1,15 @@
+{
+"error": {
+"code": "SERVICE_UNAVAILABLE",
+"status": 503,
+"title": "伺服器維護中或暫時無法提供服務",
+"message": "我們的伺服器目前遇到非預期的狀況或正在進行緊急維護，暫時無法處理您的請求。請稍後再試。",
+"timestamp": "2026-10-07T15:30:00Z",
+"path": "/api/v1/resource",
+"retry_after_seconds": 60,
+"support": {
+"help_url": "https://status.example.com",
+"contact_email": "support@example.com"
+}
+}
+}
