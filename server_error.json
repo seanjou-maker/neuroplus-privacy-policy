@@ -1,5 +1,5 @@
 {
-  "sysCode": 200,
-  "sysTitle": "",
-  "sysMsg": ""
+  "sysCode": 201,
+  "sysTitle": "系統臨時維護中",
+  "sysMsg": "系統正在進行臨時維護，請稍後再試。"
 }
